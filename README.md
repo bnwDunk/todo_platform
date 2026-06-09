@@ -44,3 +44,17 @@ Use `docker compose down -v` only when you want to remove the MySQL data volume 
 | `POST` | `/api/todos` | Create todo |
 | `PATCH` | `/api/todos/:id` | Update title or completed state |
 | `DELETE` | `/api/todos/:id` | Delete todo |
+
+
+## CICD
+```
+    เรา push code ไป GitHub
+            ↓
+    GitHub Actions ทำงาน
+            ↓
+    SSH เข้า VM
+            ↓
+    pull code ล่าสุด
+            ↓
+    docker compose up -d --build
+```
